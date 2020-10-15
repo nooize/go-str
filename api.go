@@ -14,33 +14,41 @@ func (s Str) HasSuffix(suffix string) bool {
 }
 
 func (s Str) Replace(old, new string, n int) Str {
-	return Str{strings.Replace(s.value, old, new, n)}
+	s.value = strings.Replace(s.value, old, new, n)
+	return s
 }
 
 func (s Str) ReplaceAll(old, new string) Str {
-	return Str{strings.ReplaceAll(s.value, old, new)}
+	s.value = strings.ReplaceAll(s.value, old, new)
+	return s
 }
 
 func (s Str) Title() Str {
-	return Str{strings.Title(s.value)}
+	s.value = strings.Title(s.value)
+	return s
 }
 
 func (s Str) ToLower() Str {
-	return Str{strings.ToLower(s.value)}
+	s.value = strings.ToLower(s.value)
+	return s
 }
 
 func (s Str) ToLowerSpecial(c unicode.SpecialCase) Str {
-	return Str{strings.ToLowerSpecial(c, s.value)}
+	s.value = strings.ToLowerSpecial(c, s.value)
+	return s
 }
 
 func (s Str) ToUpper() Str {
-	return Str{strings.ToUpper(s.value)}
+	s.value = strings.ToUpper(s.value)
+	return s
 }
 
 func (s Str) ToUpperSpecial(c unicode.SpecialCase) Str {
-	return Str{strings.ToUpperSpecial(c, s.value)}
+	s.value = strings.ToUpperSpecial(c, s.value)
+	return s
 }
 
 func (s Str) TrimSpace() Str {
-	return Str{strings.TrimSpace(s.value)}
+	s.value = strings.TrimSpace(s.value)
+	return s
 }

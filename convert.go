@@ -11,8 +11,8 @@ var (
 )
 
 func (s Str) CamelToSnakeCase() Str {
-	n := Str{ value: matchFirstCap.ReplaceAllString(s.value, "${1}_${2}") }
-	n.value = matchAllCap.ReplaceAllString(n.value, "${1}_${2}")
-	n.value = strings.ToLower(n.value)
-	return n
+	s.value = matchFirstCap.ReplaceAllString(s.value, "${1}_${2}")
+	s.value = matchAllCap.ReplaceAllString(s.value, "${1}_${2}")
+	s.value = strings.ToLower(s.value)
+	return s
 }
