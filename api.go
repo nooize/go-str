@@ -14,7 +14,7 @@ func (s Str) HasSuffix(suffix string) bool {
 }
 
 func (s Str) Replace(old, new string, n int) Str {
-	return Str{&}
+	return Str{strings.Replace(s.value, old, new, n)}
 }
 
 func (s Str) ReplaceAll(old, new string) Str {
