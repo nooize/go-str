@@ -1,20 +1,25 @@
 ### go-str
 
 tiny package to work with golang strings as flows
-and remove spaghetti code fro yjouse operations
+and remove spaghetti code from your string operations
 
-Classic style
+classic style with _strings_ package
 
- str := "SaMe bAd stRing"
- str := strings.Title(strings.Replace(strings.ToLower(str), "bad", "good"))
+```golang
+str := "SaMe bAd stRing"
+str := strings.Title(strings.Replace(strings.ToLower(str), "bad", "good"))
+```
 
-Str Style:
+__str__ style:
 
-` 
+```golang
   str := str.New("SaMe bAd stRing").
           ToLower().
           Replace("bad", "good").
           Title().
           String() 
-          
-`
+```
+
+also __str__ has same additional functions:
+
+

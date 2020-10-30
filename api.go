@@ -5,6 +5,17 @@ import (
 	"unicode"
 )
 
+
+func (s Str) Add(v Str) Str {
+	s.value += v.S()
+	return s
+}
+
+func (s Str) AddString(v string) Str {
+	s.value += v
+	return s
+}
+
 func (s Str) HasPrefix(prefix string) bool {
 	return strings.HasPrefix(s.value, prefix)
 }
