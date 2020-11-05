@@ -16,4 +16,8 @@ func (s Str) S() string {
 	return s.value
 }
 
+func (s Str) Bytes() []byte {
+	return []byte(s.value)
+}
+
 
