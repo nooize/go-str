@@ -59,6 +59,11 @@ func (s Str) ToUpperSpecial(c unicode.SpecialCase) Str {
 	return s
 }
 
+func (s Str) Trim(curset string) Str {
+	s.value = strings.Trim(s.value, curset)
+	return s
+}
+
 func (s Str) TrimSpace() Str {
 	s.value = strings.TrimSpace(s.value)
 	return s
