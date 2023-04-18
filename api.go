@@ -5,7 +5,6 @@ import (
 	"unicode"
 )
 
-
 func (s Str) Add(v Str) Str {
 	s.value += v.S()
 	return s
@@ -31,6 +30,14 @@ func (s Str) Replace(old, new string, n int) Str {
 
 func (s Str) ReplaceAll(old, new string) Str {
 	s.value = strings.ReplaceAll(s.value, old, new)
+	return s
+}
+
+func (s Str) Tail(count int) Str {
+	length := len(s.value)
+	if length >= count {
+		s.value = s.value[length-count:]
+	}
 	return s
 }
 
